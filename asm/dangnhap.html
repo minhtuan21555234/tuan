@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>đăng nhập  </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	
+
+	<link rel="icon" type="image/png" href="assets/img/icons/favicon.ico"/>
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	
+
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/iconic/css/material-design-iconic-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animate/animate.css">
+<!--===============================================================================================-->	
+
+	<link rel="stylesheet" type="text/css" href="assets/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+
+	<link rel="stylesheet" type="text/css" href="assets/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/vendor/select2/select2.min.css">
+	
+<!--===============================================================================================-->	
+	
+
+	<link rel="stylesheet" type="text/css" href="assets/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100" style="background-image: url(assets/img/nen1.jpg);">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+
+		
+					<span class="login100-form-title p-b-49">
+						Dang nhap
+					</span>
+
+                <form    onsubmit="signup()" class="login100-form validate-form" >
+                  
+
+					<div class="wrap-input100 validate-input" data-validate = "bạn ko thể bỏ trống "> 
+						<!-- =======data validate này sẽ cảnh báo một thông báo và trả về false   ======= -->
+						<span class="label-input100">Tên Đăng Nhập </span>
+						<input class="input100" id="username" type="text" name="username" placeholder="nhập Vào Username"> 
+						<span class="focus-input100" data-symbol="&#xf206;"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="bạn ko thể bỏ trống">
+						<span class="label-input100">Mật khẩu</span>
+						<input class="input100" id="password"  type="password" name="password" placeholder="nhập vào Password ">
+						<span class="focus-input100" data-symbol="&#xf190;"></span>
+					</div>
+                   
+                
+					
+					<div class="container-login100-form-btn">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<button onclick="login()"  class="login100-form-btn"> Đăng Nhập  </button>
+
+
+							
+
+							
+
+							
+						</div>
+
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<a href="dangki.html" class="login100-form-btn"> Đăng Kí  </a>
+
+						</div>
+					</div>
+                </form>
+
+					<div class="flex-c-m">
+						<a href="#" class="login100-social-item bg1">
+							<i class="fa fa-facebook"></i>
+						</a>
+
+						<a href="#" class="login100-social-item bg2">
+							<i class="fa fa-twitter"></i>
+						</a>
+
+						<a href="#" class="login100-social-item bg3">
+							<i class="fa fa-google"></i>
+						</a>
+					</div>
+
+					
+		</div>
+	</div>
+	
+
+	<div id="dropDownSelect1"></div>
+	
+
+	
+	<script >
+	const users = [];
+
+		function register() {
+		  const username = document.getElementById("username").value;
+		  const email = document.getElementById("email").value;
+		  const password = document.getElementById("password").value;
+		
+		  if (username === "" || email === "" || password === "") {
+			alert("Vui lòng nhập đầy đủ thông tin.");
+			return;
+		  }
+		
+		  const user = users.find(user => user.username === username || user.email === email);
+		
+		  if (user) {
+			alert("Tên đăng nhập hoặc email đã được sử dụng.");
+		  } else {
+			users.push({ username, email, password });
+			alert("Đăng ký thành công!");
+			
+			// Lưu thông tin người dùng vào localStorage
+			localStorage.setItem(username, JSON.stringify({ email, password }));
+		  }
+		}
+		
+		function validateUsername(username) {
+		  return username.length >= 10;
+		}
+		
+		function validateEmail(email) {
+		  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+		}
+		
+		function validatePassword(password) {
+		  return /[A-Z]/.test(password);
+		}
+		
+		function login() {
+		  const username = document.getElementById("username").value;
+		  const password = document.getElementById("password").value;
+		
+		  if (username === "" || password === "") {
+			alert("Vui lòng nhập đầy đủ thông tin.");
+			return;
+		  }
+		
+		  // Lấy thông tin người dùng từ localStorage
+		  const userInfo = JSON.parse(localStorage.getItem(username));
+		
+		  if (!userInfo) {
+			alert("Tên đăng nhập không đúng.");
+		  } else if (userInfo.password !== password) {
+			alert("Mật khẩu không đúng.");
+		  } else {
+			window.location.href = "http://127.0.0.1:5500/asm/index.html";
+			alert("Đăng nhập thành công!");
+		
+			// Chuyển sang trang HTML mới
+			window.location.href = "http://127.0.0.1:5500/asm/index.html";
+			
+
+		  }
+		}
+		</script>
+
+
+
+
+</body>
+</html>

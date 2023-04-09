@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/your-path-to-fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>orchard.vn</title>
+   
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Sofia+Sans:wght@200&display=swap');
+        .{
+            padding:0;
+            margin:0;
+
+        }
+        body{
+            font-family: 'Open Sans', sans-serif;
+            font-size: 14px;
+            color:#111;
+            line-height : 1.15;
+        }
+        #wrapper{
+            max-width: 1170px;
+            margin:0 auto;
+        }
+        .headline{
+            text-align: center;
+            margin:40px 0px;
+        }
+        h3{
+            font-size: 25px;
+            color:#111;
+            padding:10px 20px;
+            text-transform: uppercase;
+            
+            display:inline-block;
+            color: #111;
+            font-weight: 600;
+            align-content:center ;
+        }
+        .products{
+            
+          
+           
+           
+            
+        }
+      
+        ul.products{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            flex-wrap: wrap;
+           
+
+        }
+       
+        ul.products li{
+             flex-basis: 15%;
+             padding-left:10px;
+             padding-right:15px ;
+             box-sizing: border-box;
+             margin-bottom: 30px;
+
+        }
+        ul.products li img{
+           max-width: 100%;
+           height: auto; 
+        }
+        ul.products li .product-top{
+            position: relative;
+            overflow: hidden;
+        }
+       
+         ul.products li.product-top .product-thumb{
+            display: block;
+            
+        }
+        ul.products li .product-top .product-thumb img{
+            display: block;
+           
+        }
+        ul.products li .product-top a.buy-now{
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            background-color: #446084;
+            color:#fff;
+            padding: 10px 0px;
+            position: absolute;
+            bottom: -36px;
+            width: 100%;
+            transition: 0.25s ease-in-out;
+            opacity: 0.85;
+
+
+        }
+        ul.products li:hover a.buy-now{
+          bottom: 0px;  
+        }
+        ul.products li .product-info {
+            padding: 10px 0px;
+        }
+        ul.products li .product-info a{
+            display: block;
+            text-decoration: none;
+
+        }
+        ul.products li .product-info a.product-cat{
+            font-size: 11px;
+            text-transform: uppercase;
+            color:#9e9e9e;
+            padding: 3px 0px ;
+        }
+        ul.products li .product-info a.product-name{
+            color:#334862;
+            padding: 3px 0px;
+
+        }
+        ul.products li .product-info a.product-pice{
+            color:red;
+            padding: 2px 0px ;
+            font-weight:10px ;
+            
+
+
+        }
+        *{
+            text-decoration: none;
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            color:white;
+            font-family: Arial;
+
+
+        }
+        .nav{
+         
+            display: flex;
+            height: 10em ;
+            line-height: 10em ;
+            justify-content: space-between;
+            
+        }
+        .menucon{
+            display: flex;
+            b
+        }
+        .menucon>li{
+            padding-right: 2.5em ;
+            font-size: 17px;
+
+
+        }
+        .menucon li a:hover{
+            color: #000000;
+            transition: color .2s ease-out;
+            
+            font-weight: bold;
+        }
+        .menucon>li>a {
+            color: #404040;
+            background-color:;
+            
+        }
+        .menu_down {
+            background-color:black;
+            color:#000000;
+            margin: 0px auto;
+            line-height: 10px;
+            position: absolute;
+            top:73px;
+            display: none;
+            
+        }
+        .menu_down li{
+            text-align: center;
+            padding: 0px ;
+
+
+        }
+        .menu_down li a {
+            color: #111;
+        }
+        .menu_down li a:hover{
+            color: #000000;
+        }
+        .menu_down li a:hover .menu_down{
+            display: block;
+        }
+        .icon-{
+            width: 40px;
+            height: 50px;
+           color: #000000;
+
+        }
+        .hr{
+           background-color:rgb(224, 229, 225);
+       
+            height: 15px;
+            display: block;
+               margin-top: 0.5em;
+                margin-bottom: 0.5em;
+             margin-left: auto;
+               margin-right: auto;
+               border-style: inset;
+
+           
+        }
+       .form{
+        display: block;
+        
+       }
+
+       
+    </style>
+    <div id="wrapper">
+        <div class="nav">
+           
+           
+        <h3 >   ORCHARD.vn   </h3>
+            
+            <ul class="menucon"> 
+
+               
+
+              <li><a href="#" >HOME </a></li>
+               
+                <li><a href="#" >Thương Hiệu </a> </li>
+                <li><a href="#" >Bán Chạy  </a></li>
+                
+                  
+                <li><a href="#" >Nổi Bật </a></li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6  icon-">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                  </svg>
+                  
+                
+                <li><a href="http://127.0.0.1:5500/css/dangnhap.html" >Đăng Nhập </a></li>
+                <form action="" id="search-box">
+                    <input type="text " id="search-text"
+                    <button id="search-bnt"> sccc  </button>
+
+                </form>
+            </ul>                               
+             
+        </div>
+       
+        <ul class="products">
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-thumb">
+                            <img src="assets/img/specials-1.png"
+                        </a>
+                        <a href="" class="buy-now"> Mua Ngay  </a>
+                        <!--mua ngay -->
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Laurelle London code black  </a> 
+                     <a class="product-pice">650.00đ</a>
+                    </div>
+
+
+                </div>
+            </li>
+        
+        
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/specials-2.png"
+                        </a>
+                        <!--mu  <a href="" class="buy-now"> Mua Ngay  </a>a ngay -->
+                        <a href="" class="buy-now"> Mua Ngay  </a>
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Laurelle London Royele </a> 
+                     <a class="product-pice">1.500.000đ</a>
+                    </div>
+
+
+                </div>
+            </li>
+            
+
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/specials-3.png"
+                        </a>
+                        <!--mua ngay -->
+                        <a href="" class="buy-now"> Mua Ngay  </a>
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Chloe Nomade EDP </a> 
+                     <a class="product-pice">520.000đ</a>
+                    </div>
+
+
+                </div>
+            </li>
+    
+            <li >
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/specials-4.png"
+                        </a>
+                        <!--mua ngay -->
+                        <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Dior Sauvage EDP </a> 
+                     <a class="product-pice">5.100.000đ</a>
+                    </div>
+
+
+                </div>
+            </li>
+       
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/specials-5.png"
+                        </a>
+                        <!--mua ngay -->
+                        <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Versace Eros</a> 
+                     <a class="product-pice">1.550.00đ</a>
+                    </div>
+
+
+                </div>
+            </li>
+        
+        
+       
+            <li class="products">
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/mon-an-han-quoc-trong-tieng-anh.jpg"
+                        </a>
+                        <!--mua ngay -->
+                        <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> NAUTICA Classic Eau </a> 
+                     <a class="product-pice">4.000.000đ</a>
+                    </div>
+
+
+                </div>
+            </li>
+          
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/anh1.jpeg"
+                        </a>
+                        <!--mua ngay -->
+                        <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Giorgio Armani Acqua Di Gio Pour Homme EDT </a> 
+                     <a class="product-pice">3.300.000đ</a>
+                    </div>
+
+
+                </div>
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/anh3.jpeg"
+                        </a>
+                        <!--mua ngay -->
+                    <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Moschino Toy  </a> 
+                     <a class="product-pice">980.000đ</a>
+                    </div>
+
+
+                </div>
+               
+               
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/anh4.jpeg"
+                        </a>
+                        <!--mua ngay -->
+                    <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Versace Pour Homme </a> 
+                     <a class="product-pice">1.694.000</a>
+                    </div>
+
+
+                </div>
+               
+               
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/anh5.jpeg"
+                        </a>
+                        <!--mua ngay -->
+                    <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Franck Boclet Cocaine Unisex  </a> 
+                     <a class="product-pice">4.300.000</a>
+                    </div>
+
+
+                </div>
+               
+               
+            </li>
+            <li>
+                <div class="product-item">
+                    <div class="product-top">
+                        <a href="" class="product-">
+                            <img src="assets/img/anh6.jpeg"
+                        </a>
+                        <!--mua ngay -->
+                    <a href="" class="buy-now"> Mua Ngay  </a>
+
+
+                    </div>
+                    <div class="product-info">
+                     <a href="" class="product-cat">bags </a>  
+                     <a href="" class="product-name"> Moschino Toy  </a> 
+                     <a class="product-pice">980.000đ</a>
+                    </div>
+
+
+                </div>
+               
+               
+            </li>
+           
+        
+
+
+            </div>
+           
+            </div>
+
+        </ul>
+              
+        
+    </div>
+    
+</body>
+</html>
